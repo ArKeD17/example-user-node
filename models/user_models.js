@@ -65,7 +65,7 @@ module.exports.register = (req, res) => {
 }
 
 module.exports.profile = (req, res) => {
-	console.log(`POST ${req.route.path}`);
+	console.log(`PUT ${req.route.path}`);
 
 	let u = req.session.user;
 	if(u != undefined){

@@ -31,7 +31,7 @@ router.route('/profile')
 		else
 			res.redirect('/');
 	})
-	.post(User.profile);
+	.put(User.profile);
 
 /* Export module */
 module.exports = router;

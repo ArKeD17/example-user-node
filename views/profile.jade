@@ -8,7 +8,7 @@ block header
 		.mdl-grid
 			.mdl-cell.mdl-cell--10-col.mdl-cell--12-col-tablet.mdl-cell--12-col-phone.mdl-cell--1-offset-desktop.mdl-card.mdl-shadow--2dp
 				p.mdl-typography--headline.mdl-color--grey-100.center.padding-1.margin-0 Edit profile
-				form(action="/profile" method="POST" enctype="multipart/form-data").mdl-grid.margin-1
+				form(action="/profile?_method=PUT" method="POST" enctype="multipart/form-data").mdl-grid.margin-1
 					.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--6-col.margin-center
 						input(value="#{user.name}" name="name" type="text" id="name" ).mdl-textfield__input
 						label(for="name").mdl-textfield__label Full name
