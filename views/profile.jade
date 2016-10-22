@@ -2,7 +2,7 @@ extends ./layouts/_index.jade
 block header
 	include ./layouts/_menus/_user.jade
 		.center.margin-top-2
-			div(style="background-image: url(#{user.image.thumb})").user-image
+			div(style="background-image: url(#{user.image.thumb})").user-image.mdl-shadow--2dp
 			p.mdl-typography--display-1.mdl-color-text--grey-800.margin-0= user.name
 			p.mdl-typography--title.mdl-color-text--grey-600.font-weight-2= user.email
 		.mdl-grid
