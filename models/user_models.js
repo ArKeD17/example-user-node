@@ -91,8 +91,14 @@ module.exports.profile = (req, res) => {
 				
 				// Delete image
 				if(user.image != 'no-img.png'){
-					fs.unlink(`${path_image}o_${user.image}`);
-					fs.unlink(`${path_image}t_${user.image}`);
+                    fs.access(path_image+"o_"+user.image, (err) => {
+                        if(err){
+                            if(err.code == "EEXIST"){
+					            fs.unlink(`${path_image}o_${user.image}`);
+					            fs.unlink(`${path_image}t_${user.image}`);
+                            }
+                        }
+                    });
 				}
 
 				user.image = image;
